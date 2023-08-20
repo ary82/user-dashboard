@@ -1,0 +1,22 @@
+/* Add a css reset */
+@import url("./normalize.css");
+
+/* Specify colors */
+:root {
+  --base-clr: ;
+  --base-alt1: ;
+  --text-clr: ;
+  --text-alt1: ;
+  --text-links: ;
+  --text-success: ;
+  --text-warning: ;
+  --text-error: ;
+}
+
+/* Add External Font */
+@font-face {
+  font-family: "";
+  src: url("") format("woff2");
+  font-weight: range;
+  font-display: swap;
+}

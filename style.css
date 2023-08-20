@@ -3,14 +3,10 @@
 
 /* Specify colors */
 :root {
-  --base-clr: ;
-  --base-alt1: ;
-  --text-clr: ;
-  --text-alt1: ;
-  --text-links: ;
-  --text-success: ;
-  --text-warning: ;
-  --text-error: ;
+  --white-clr: #e6e7eb;
+  --black-clr: #221e21;
+  --accent1-clr: #b2b8a7;
+  --accent2-clr: #00b18a;
 }
 
 /* Add External Font */
@@ -19,4 +15,11 @@
   src: url("") format("woff2");
   font-weight: range;
   font-display: swap;
+}
+
+body {
+  font-size: 3rem;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--white-clr);
 }

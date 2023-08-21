@@ -3,7 +3,8 @@
 
 /* Specify colors */
 :root {
-  --white-clr: #e6e7eb;
+  --white-clr: #ffffff;
+  --semi-white-clr: #e6e7eb;
   --black-clr: #221e21;
   --accent1-clr: #b2b8a7;
   --accent2-clr: #00b18a;
@@ -18,8 +19,43 @@
 }
 
 body {
-  font-size: 3rem;
+  font-size: 1rem;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: var(--white-clr);
+  background-color: var(--semi-white-clr);
+  color: var(--black-clr);
+  display: flex;
+}
+
+#left_bar {
+  background-color: var(--accent1-clr);
+  color: var(--black-clr);
+  display: flex;
+  flex-direction: column;
+}
+#left_bar > div {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+#left_bar > .title {
+  gap: 0.5rem;
+}
+h1{
+  font-weight: 400;
+  font-size: 2rem;
+}
+.title > svg {
+  width: 2rem;
+}
+
+.nav_button > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
 }

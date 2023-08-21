@@ -6,8 +6,8 @@
   --white-clr: #ffffff;
   --semi-white-clr: #e6e7eb;
   --black-clr: #221e21;
-  --accent1-clr: #b2b8a7;
-  --accent2-clr: #00b18a;
+  --accent2-clr: #b2b8a7;
+  --accent1-clr: #00b18a;
 }
 
 /* Add External Font */
@@ -29,21 +29,24 @@ body {
 
 #left_bar {
   background-color: var(--accent1-clr);
-  color: var(--black-clr);
+  color: var(--semi-white-clr);
+  text-shadow: 1px 1px 1px black;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 #left_bar > div {
   display: flex;
-  justify-items: flex-start;
+  margin-left: 1rem;
   align-items: center;
-  padding: 0 2rem;
+  margin: 0 1rem;
   gap: 1rem;
 }
 #left_bar > .title {
   gap: 0.5rem;
+  margin: 3rem 1rem;
 }
-h1{
+h1 {
   font-weight: 400;
   font-size: 2rem;
 }
@@ -51,11 +54,80 @@ h1{
   width: 2rem;
 }
 
-.nav_button > svg {
-  width: 1.5rem;
-  height: 1.5rem;
+svg {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
+}
+#left_bar :nth-child(6) {
+  margin-bottom: 3rem;
+}
+
+#right_content {
+  width: 100%;
+  font-size: 1rem;
+}
+#top_bar {
+  background-color: var(--white-clr);
+  color: var(--black-clr);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+#search {
+  background-color: var(--semi-white-clr);
+  color: grayhere;
+  padding: 0.5rem 1rem;
+  margin: 1rem 1rem 1rem -0.5rem;
+  border-radius: 1rem;
+  flex-grow: 1;
+}
+#greeting {
+  background-color: var(--white-clr);
+  color: var(--black-clr);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  justify-items: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+#greeting svg {
+  padding: 1rem;
+  width: 6rem;
+  height: 6rem;
+}
+#greeting .button {
+  justify-self: stretch;
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--accent1-clr);
+  padding: 0.5rem 1.3rem;
+  border-radius: 1rem;
+  color: var(--semi-white-clr);
+  text-shadow: 1px 1px 1px black;
+}
+
+
+
+
+#menu {
+  position: absolute;
+  visibility: hidden;
+  cursor: pointer;
+}
+@media screen and (max-width: 866px) {
+  #left_bar {
+    position: absolute;
+    visibility: hidden;
+    left: -250px;
+  }
+  #menu {
+    position: static;
+    visibility: visible;
+  }
 }

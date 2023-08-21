@@ -77,6 +77,7 @@ h2 {
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
+  text-align: center;
 }
 #search {
   background-color: var(--semi-white-clr);
@@ -85,6 +86,7 @@ h2 {
   margin: 1rem 1rem 1rem -0.5rem;
   border-radius: 1rem;
   flex-grow: 1;
+  text-align: left;
 }
 #greeting {
   background-color: var(--white-clr);
@@ -95,13 +97,14 @@ h2 {
   justify-items: flex-start;
   align-items: center;
   gap: 1rem;
+  box-shadow: 1px 5px 3px lightgray;
 }
 #greeting svg {
   padding: 1rem;
   width: 6rem;
   height: 6rem;
 }
-#greeting .button {
+.button {
   justify-self: stretch;
   text-align: center;
   font-size: 1rem;
@@ -112,16 +115,26 @@ h2 {
   text-shadow: 1px 1px 1px black;
 }
 
-
-
-
 #menu {
   position: absolute;
   visibility: hidden;
   cursor: pointer;
 }
+#small_screen_buttons {
+  display: none;
+}
+#small_screen_buttons > div {
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--accent1-clr);
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  color: var(--semi-white-clr);
+  text-shadow: 1px 1px 1px black;
+}
 @media screen and (max-width: 866px) {
   #left_bar {
+    display: none;
     position: absolute;
     visibility: hidden;
     left: -250px;
@@ -129,5 +142,16 @@ h2 {
   #menu {
     position: static;
     visibility: visible;
+  }
+  .button {
+    display: none;
+  }
+  #greeting {
+    grid-template-columns: auto 1fr auto;
+  }
+  #small_screen_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
   }
 }
